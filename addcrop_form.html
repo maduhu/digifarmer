@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<head>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script src="validator.js"></script>
+
+</head>
+<body>
+<form data-toggle="validator" role="form" name="farmer_registrationform" method="get" action="/.html">
+  
+  <div class="form-group">
+  <div class="cotainer-fluid">
+  	<div class="row">
+  		<div class="col-md-4 col-md-offset-3">
+    <label for="c_name" class="control-label">Crop Name</label>
+    <input type="text" class="form-control" name="c_name"id="c_name" placeholder="Enter the name of crop you want to add in your farm" required> 
+     <div class="help-block with-errors"></div>
+  </div></div></div></div>
+
+  <div class="form-group">
+  	<div class="cotainer-fluid">
+  	<div class="row">
+  		<div class="col-md-4 col-md-offset-3">
+    <label for="c_quantity" class="control-label">Quantity</label>
+    <input type="number" class="form-control" name="c_quantity" id="c_quantity" min="1" max="1000" placeholder="Enter the quantity of crops in kg" required>
+     <div class="help-block with-errors"></div>
+  </div></div></div></div>
+
+  <div class="form-group">
+  	<div class="cotainer-fluid">
+  	<div class="row">
+  		<div class="col-md-4 col-md-offset-3">
+    <label for="c_start" class="control-label">Crop started date</label>
+    <input type="datetime-local" class="form-control" name="f_password" id="f_password" placeholder="Password" required>
+     <div class="help-block with-errors"></div>
+  </div></div></div></div>
+  
+  
+<div class="form-group">
+  	<div class="cotainer-fluid">
+  	<div class="row">
+  		<div class="col-md-4 col-md-offset-3">
+  		<p class="help-block">All fields are compulsory.</p>
+		<button type="reset" class="btn btn-default">Reset</button>
+
+  		<button onclick="sendsms.php" style="margin-left:25px;" type="submit" class="btn btn-default">Submit</button>
+  	</div></div></div></div>
+<!-- <script>
+function send(){
+var count=0;
+count++;
+
+	var myTime=setTimeout(function(){
+    <?php
+	header("Loction:sendsms.php");
+	?>
+}, 2000);
+if(count>3)
+	clearInterval(myTime);
+}
+</script> -->
+
+
+
+</form>
+
+</body>
+
+
+
+</HTML>

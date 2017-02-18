@@ -1,0 +1,9 @@
+CREATE DATABASE `Farmer`;
+
+CREATE TABLE `Farmer`.`buyer_registration` ( `b_id` INT NOT NULL AUTO_INCREMENT ,  `b_name` VARCHAR(50) NOT NULL ,  `b_email` VARCHAR(50) NOT NULL ,  `b_password` VARCHAR(50) NOT NULL ,  `b_company` VARCHAR(50) NOT NULL ,  `b_address` VARCHAR(250) NOT NULL ,  `b_phone` BIGINT(10) NOT NULL ,    PRIMARY KEY  (`b_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `farmer`.`crop_details` ( `c_name` VARCHAR(20) NOT NULL ,  `c_suggestions` VARCHAR(250) NOT NULL ,  `c_fertilizer` VARCHAR(250) NOT NULL ,  `c_tutorial` VARCHAR(250) NOT NULL ,  `c_price` INT(10) NOT NULL ,  `c_maxstorage` VARCHAR(20) NOT NULL ,  `c_S1` INT(10) NOT NULL ,  `c_S2` INT(10) NOT NULL ,  `c_S3` INT(10) NOT NULL ,    PRIMARY KEY  (`c_name`)) ENGINE = InnoDB;
+
+CREATE TABLE `farmer`.`put_for_sale` ( `f_id` INT NOT NULL ,  `c_id` INT NOT NULL ,  `c_name` VARCHAR(20) NOT NULL ,  `c_sellingprice` INT NOT NULL ,  `c_quantity` INT NOT NULL ,  `c_sellingdate` DATETIME NOT NULL ,  `c_freshness` FLOAT NOT NULL ) ENGINE = InnoDB;
+
+CREATE TABLE `farmer`.`government_news` ( `date` DATETIME NOT NULL ,  `description` VARCHAR(250) NOT NULL ) ENGINE = InnoDB;
